@@ -36,4 +36,4 @@ The template's documentation is available at https://pascalmichaillat.org/d1/.
 
 ## License
 
-The content of this repository is licensed under the terms of the [MIT License](https://opensource.org/license/mit-license-php/).
+The content of this repository is licensed under the terms of the MIT License.
