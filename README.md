@@ -32,7 +32,7 @@ The template's documentation is available at https://pascalmichaillat.org/d1/.
 ## Related resources
 
 + [This LaTeX template](https://github.com/pmichaillat/latex-paper) produces academic papers following the same principles, and with a similar appearance, as this presentation template. 
-+ [This LaTeX style file](https://github.com/pmichaillat/latex-math) contains commands to typeset mathematical expressions easily. It can be used in combination with this presentation template.
++ [This LaTeX style file](https://github.com/pmichaillat/latex-math) contains commands to write mathematical expressions easily. It can be used in combination with this presentation template.
 
 ## License
 
