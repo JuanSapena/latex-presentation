@@ -10,7 +10,8 @@ The template's documentation is available at https://pascalmichaillat.org/d1/.
 
 + The font for text, roman math, and numbers is [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro).
 + The font for Greek and calligraphic math is [Euler](http://luc.devroye.org/fonts-26139.html).
-+ No colors are used in the text (only black/gray) to reduce distraction. Colors are reserved for graphs and alerts.
++ No colors are used in the text (only black/gray) to reduce distraction. 
++ Colors are reserved for graphs and alerts.
 + Margins, spacing, and font size are set for comfortable reading.
 + There are no frills at the periphery of the slides.
 

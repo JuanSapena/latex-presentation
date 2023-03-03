@@ -1,4 +1,4 @@
-% ---------- Fonts ----------
+%% Fonts
 
 \usefonttheme{professionalfonts}
 \usepackage{sourcesanspro}
@@ -6,7 +6,7 @@
 \usepackage{amsmath,amssymb,amsthm,eucal,bbold,bm}
 \usepackage[italic,eulergreek]{mathastext}
 
-% ---------- Beamer theme ----------
+%% Beamer theme
 
 \usetheme{Boadilla}
 \setbeamercovered{transparent}
@@ -14,84 +14,88 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 
-% ---------- Spacing ----------
-
-\usepackage{setspace} 
-\setstretch{1.4} 
+%% Spacing
 
 \setbeamertemplate{title page}[default][left,leftskip=-9pt]
 \setbeamertemplate{frametitle}[default][left,leftskip=3pt]
 \addtobeamertemplate{frametitle}{\vspace*{-4mm}}{}
 
-% ---------- General typography ----------
+% Line spacing
+\usepackage{setspace} 
+\setstretch{1.4} 
+
+%% General typography
 
 \usepackage{textcomp}
 \usepackage[overload]{textcase}
 
-\usepackage{microtype}
-\DisableLigatures[f]{encoding = *, family = * }
-
-\MTsetmathskips{f}{\thinmuskip}{0mu} % Correct spacing around f in math
-\MTsetmathskips{y}{\thinmuskip}{0mu} % Correct spacing around y in math
-\MTsetmathskips{p}{\thinmuskip}{0mu} % Correct spacing around p in math
-\MTsetmathskips{l}{0mu}{\thinmuskip} % Correct spacing around l in math
-\MTsetmathskips{j}{0mu}{\thinmuskip} % Spacing around j in math
-
-\usepackage{url}
-\urlstyle{same}
-
+% Define colors
 \colorlet{myblack}{black!85!}
 \colorlet{mygray}{gray!60!}
 
+% Lists
 \setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
 \setbeamertemplate{itemize item}{\textbullet}
 \setbeamertemplate{itemize subitem}{\textendash} 
 \setbeamertemplate{enumerate item}[default]
 
+% Text and item colors
 \setbeamercolor{normal text}{fg=myblack}
 \setbeamercolor{itemize item}{fg=mygray}
 \setbeamercolor{itemize subitem}{fg=mygray} 
 \setbeamercolor{enumerate item}{fg=mygray} 
 \setbeamercolor{enumerate subitem}{fg=mygray}
 
-% ---------- Title page ----------
+% Microtypography
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% URLs
+\usepackage{url}
+\urlstyle{same}
+
+% Correct spacing around letters in math
+\MTsetmathskips{f}{\thinmuskip}{0mu} 
+\MTsetmathskips{y}{\thinmuskip}{0mu}
+\MTsetmathskips{p}{\thinmuskip}{0mu}
+\MTsetmathskips{l}{0mu}{\thinmuskip}
+\MTsetmathskips{j}{0mu}{\thinmuskip}
+
+%% Title page
 
 \setbeamercolor{title}{fg=myblack}
 \setbeamercolor{date}{fg=mygray}
-
 \setbeamerfont{title}{size=\LARGE, series=\scshape}
 \setbeamerfont{author}{size=\large}
 
-% Redefine \title to have presentation title with clean capitalization and thick black line underneath
+% Line below title
 \let\oldtitle\title
 \renewcommand{\title}[1]{\oldtitle[]{\MakeLowercase{#1}\vspace{-7mm}\\\color{myblack}{\rule{\textwidth}{2pt}}\vspace{5mm}}}
 
-% Command to enter title page information
-% Usage: \information{Author}{Date}{URL}
+% Title page information
 \newcommand{\information}[3]{\author[]{#1\vspace{0.5cm}\\#2\vspace{0.5cm}\\\color{mygray}{\small Paper available at \url{#3}}\vspace*{-2cm}}\date[]{}}
 
-% ---------- Headings ----------
+%% Headings
 
 \setbeamercolor{frametitle}{fg=myblack}
 \setbeamerfont{frametitle}{series=\scshape}
 
-% Redefine \frametitle to clean capitalization and move title up
+% Heading position
 \let\oldframetitle\frametitle
 \renewcommand{\frametitle}[1]{\oldframetitle{\vspace{-0.3cm}\MakeLowercase{#1}}}
 
-% Command to enter section title on its own slide
-% Usage: \heading{Section Title}
+% Section heading
 \newcommand{\heading}[1]{\LARGE\scshape\color{myblack}\MakeLowercase{#1}\vspace{-7mm}\\\color{mygray}{\rule{\textwidth}{2pt}}}
 
-% Command to create gray last slide, without text
-% Usage: \lastslide
+% Gray last slide
 \newcommand{\lastslide}{\setbeamercolor{normal text}{bg=mygray}\begin{frame}\end{frame}}
 
-% ---------- Tables, figures, equations  ----------
+%% Tables, figures, equations 
 
 \usepackage{caption,subcaption,multirow,booktabs,graphicx}
 \captionsetup{labelformat=empty}
 
+% Display spacing
 \newcommand{\sfig}{0.26}
 \renewcommand{\arraystretch}{0.9}
 \AtBeginDocument{\setlength{\belowdisplayskip}{3mm}}
@@ -99,32 +103,39 @@
 \AtBeginDocument{\setlength{\belowdisplayshortskip}{3mm}}
 \AtBeginDocument{\setlength{\abovedisplayshortskip}{3mm}}
 
-% Redefine \includegraphics to have centered figures with white background
+% Centered figures with white background
 \let\oldincludegraphics\includegraphics 
 \renewcommand{\includegraphics}[2][]{\centering\textcolor{black}{\oldincludegraphics[#1]{#2}}}
 
-% ---------- Alerts ----------
+%% Alerts
 
-% Color alerts
-% Usage for red alert: \ral{text}
-\newcommand{\gal}[1]{\textcolor{Green}{#1}}
-\newcommand{\ral}[1]{\textcolor{Red}{#1}}
-\newcommand{\bal}[1]{\textcolor{NavyBlue}{#1}}
-\newcommand{\al}[1]{\textcolor{RubineRed}{#1}}
+\usepackage{xparse}
 
-% Color alerts with timing
-% Usage for red alert appearing on third click: \tral{3}{text}
-\newcommand{\tgal}[2]{\textcolor<#1>{Green}{#2}}
-\newcommand{\tral}[2]{\textcolor<#1>{Red}{#2}}
-\newcommand{\tbal}[2]{\textcolor<#1>{NavyBlue}{#2}}
-\newcommand{\tal}[2]{\textcolor<#1>{RubineRed}{#2}}
+% Standard alert
+\NewDocumentCommand{\al}{o g}{%
+\IfNoValueTF{#1}{\textcolor{RubineRed}{#2}}%
+{\textcolor<#1>{RubineRed}{#2}}}
 
-% ---------- Pictograms ----------
+% Green alert
+\NewDocumentCommand{\alg}{o g}{%
+\IfNoValueTF{#1}{\textcolor{Green}{#2}}%
+{\textcolor<#1>{Green}{#2}}}
+
+% Red alert
+\NewDocumentCommand{\alr}{o g}{%
+\IfNoValueTF{#1}{\textcolor{Red}{#2}}%
+{\textcolor<#1>{Red}{#2}}}
+
+% Blue alert
+\NewDocumentCommand{\alb}{o g}{%
+\IfNoValueTF{#1}{\textcolor{NavyBlue}{#2}}%
+{\textcolor<#1>{NavyBlue}{#2}}}
+
+%% Pictograms
 
 \def\up{\textuparrow\,}
 \def\down{\textdownarrow\,}
 \def\flat{\textrightarrow\,}
 \def\then{$\rightsquigarrow\,$}
 \def\so{{$\Rightarrow\,$}}
-\def\tb{\textbar{}}
-\def\tra{$\rangle\,$}
+\def\tb{\textbar{}\,}
