@@ -6,11 +6,26 @@
 \usepackage{amsmath,amssymb,amsthm,eucal,bbold,bm}
 \usepackage[italic,eulergreek]{mathastext}
 
+% URL font
+\usepackage{url}
+\urlstyle{same}
+
+% Microtypography
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% Correct spacing around letters in math
+\MTsetmathskips{f}{\thinmuskip}{0mu} 
+\MTsetmathskips{y}{\thinmuskip}{0mu}
+\MTsetmathskips{p}{\thinmuskip}{0mu}
+\MTsetmathskips{l}{0mu}{\thinmuskip}
+\MTsetmathskips{j}{\thinmuskip}{\thinmuskip}
+
 %% Beamer theme
 
 \usetheme{Boadilla}
-\setbeamercovered{transparent}
 \usecolortheme[]{seagull}
+\setbeamercovered{transparent}
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 
@@ -24,42 +39,27 @@
 \usepackage{setspace} 
 \setstretch{1.4} 
 
-%% General typography
-
-\usepackage{textcomp}
-\usepackage[overload]{textcase}
+%% Colors
 
 % Define colors
 \colorlet{myblack}{black!85!}
 \colorlet{mygray}{gray!60!}
 
-% Lists
-\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
-\setbeamertemplate{itemize item}{\textbullet}
-\setbeamertemplate{itemize subitem}{\textendash} 
-\setbeamertemplate{enumerate item}[default]
-
-% Text and item colors
+% Apply colors
 \setbeamercolor{normal text}{fg=myblack}
 \setbeamercolor{itemize item}{fg=mygray}
 \setbeamercolor{itemize subitem}{fg=mygray} 
 \setbeamercolor{enumerate item}{fg=mygray} 
 \setbeamercolor{enumerate subitem}{fg=mygray}
 
-% Microtypography
-\usepackage{microtype}
-\DisableLigatures[f]{encoding = *, family = * }
 
-% URLs
-\usepackage{url}
-\urlstyle{same}
 
-% Correct spacing around letters in math
-\MTsetmathskips{f}{\thinmuskip}{0mu} 
-\MTsetmathskips{y}{\thinmuskip}{0mu}
-\MTsetmathskips{p}{\thinmuskip}{0mu}
-\MTsetmathskips{l}{0mu}{\thinmuskip}
-\MTsetmathskips{j}{0mu}{\thinmuskip}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamertemplate{itemize item}{\textbullet}
+\setbeamertemplate{itemize subitem}{\textendash} 
+\setbeamertemplate{enumerate item}[default]
+
+
 
 %% Title page
 
