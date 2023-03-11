@@ -100,6 +100,15 @@
 \let\oldincludegraphics\includegraphics 
 \renewcommand{\includegraphics}[2][]{\centering\textcolor{black}{\oldincludegraphics[#1]{#2}}}
 
+%% Pictograms
+
+\def\up{\textuparrow\,}
+\def\down{\textdownarrow\,}
+\def\flat{\textrightarrow\,}
+\def\then{$\rightsquigarrow\,$}
+\def\so{{$\Rightarrow\,$}}
+\def\tb{\textbar{}\,}
+
 %% Alerts
 
 \usepackage{xparse}
@@ -123,15 +132,6 @@
 \NewDocumentCommand{\alb}{o g}{%
 \IfNoValueTF{#1}{\textcolor{NavyBlue}{#2}}%
 {\textcolor<#1>{NavyBlue}{#2}}}
-
-%% Pictograms
-
-\def\up{\textuparrow\,}
-\def\down{\textdownarrow\,}
-\def\flat{\textrightarrow\,}
-\def\then{$\rightsquigarrow\,$}
-\def\so{{$\Rightarrow\,$}}
-\def\tb{\textbar{}\,}
 
 %% Last slide
 
