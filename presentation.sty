@@ -29,70 +29,63 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 
-%% Spacing
+%% Generic slide
 
-\setbeamertemplate{title page}[default][left,leftskip=-9pt]
-\setbeamertemplate{frametitle}[default][left,leftskip=3pt]
-\addtobeamertemplate{frametitle}{\vspace*{-4mm}}{}
+\colorlet{myblack}{black!85!}
+\colorlet{mygray}{gray!60!}
+\setbeamercolor{normal text}{fg=myblack}
 
 % Line spacing
 \usepackage{setspace} 
 \setstretch{1.4} 
 
-%% Colors
+%% Title slide
 
-% Define colors
-\colorlet{myblack}{black!85!}
-\colorlet{mygray}{gray!60!}
+\setbeamerfont{title}{size=\LARGE, series=\scshape}
+\setbeamerfont{author}{size=\large}
+\setbeamertemplate{title page}[default][left,leftskip=-9pt]
+\setbeamercolor{title}{fg=myblack}
+\setbeamercolor{date}{fg=mygray}
 
-% Apply colors
-\setbeamercolor{normal text}{fg=myblack}
-\setbeamercolor{itemize item}{fg=mygray}
-\setbeamercolor{itemize subitem}{fg=mygray} 
-\setbeamercolor{enumerate item}{fg=mygray} 
-\setbeamercolor{enumerate subitem}{fg=mygray}
+% Title capitalization and underline
+\let\oldtitle\title
+\renewcommand{\title}[1]{\oldtitle[]{\MakeLowercase{#1}\vspace{-7mm}\\\color{myblack}{\rule{\textwidth}{2pt}}\vspace{5mm}}}
 
+% Paper information
+\newcommand{\information}[3]{\author[]{#1\vspace{0.5cm}\\#2\vspace{0.5cm}\\\color{mygray}{\small Paper available at \url{#3}}\vspace*{-2cm}}\date[]{}}
 
+%% Section slide
+
+\newcommand{\heading}[1]{\LARGE\scshape\color{myblack}\MakeLowercase{#1}\vspace{-7mm}\\\color{mygray}{\rule{\textwidth}{2pt}}}
+
+%% Headings
+
+\setbeamerfont{frametitle}{series=\scshape}
+\setbeamertemplate{frametitle}[default][left,leftskip=3pt]
+\addtobeamertemplate{frametitle}{\vspace*{-4mm}}{}
+\setbeamercolor{frametitle}{fg=myblack}
+
+% Capitalization
+\let\oldframetitle\frametitle
+\renewcommand{\frametitle}[1]{\oldframetitle{\vspace{-0.3cm}\MakeLowercase{#1}}}
+
+%% Lists
 
 \setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
 \setbeamertemplate{itemize item}{\textbullet}
 \setbeamertemplate{itemize subitem}{\textendash} 
 \setbeamertemplate{enumerate item}[default]
-
-
-
-%% Title page
-
-\setbeamercolor{title}{fg=myblack}
-\setbeamercolor{date}{fg=mygray}
-\setbeamerfont{title}{size=\LARGE, series=\scshape}
-\setbeamerfont{author}{size=\large}
-
-% Line below title
-\let\oldtitle\title
-\renewcommand{\title}[1]{\oldtitle[]{\MakeLowercase{#1}\vspace{-7mm}\\\color{myblack}{\rule{\textwidth}{2pt}}\vspace{5mm}}}
-
-% Title page information
-\newcommand{\information}[3]{\author[]{#1\vspace{0.5cm}\\#2\vspace{0.5cm}\\\color{mygray}{\small Paper available at \url{#3}}\vspace*{-2cm}}\date[]{}}
-
-%% Headings
-
-\setbeamercolor{frametitle}{fg=myblack}
-\setbeamerfont{frametitle}{series=\scshape}
-
-% Heading position
-\let\oldframetitle\frametitle
-\renewcommand{\frametitle}[1]{\oldframetitle{\vspace{-0.3cm}\MakeLowercase{#1}}}
-
-% Section heading
-\newcommand{\heading}[1]{\LARGE\scshape\color{myblack}\MakeLowercase{#1}\vspace{-7mm}\\\color{mygray}{\rule{\textwidth}{2pt}}}
-
-% Gray last slide
-\newcommand{\lastslide}{\setbeamercolor{normal text}{bg=mygray}\begin{frame}\end{frame}}
+\setbeamercolor{itemize item}{fg=mygray}
+\setbeamercolor{itemize subitem}{fg=mygray} 
+\setbeamercolor{enumerate item}{fg=mygray} 
+\setbeamercolor{enumerate subitem}{fg=mygray}
 
 %% Tables, figures, equations 
 
-\usepackage{caption,subcaption,multirow,booktabs,graphicx}
+\usepackage{multirow,booktabs,graphicx}
+
+% Captions
+\usepackage{caption,subcaption}
 \captionsetup{labelformat=empty}
 
 % Display spacing
@@ -139,3 +132,9 @@
 \def\then{$\rightsquigarrow\,$}
 \def\so{{$\Rightarrow\,$}}
 \def\tb{\textbar{}\,}
+
+%% Last slide
+
+\newcommand{\lastslide}{\setbeamercolor{normal text}{bg=mygray}\begin{frame}\end{frame}}
+
+
