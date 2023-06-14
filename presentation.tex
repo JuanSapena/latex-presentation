@@ -1,20 +1,22 @@
 \documentclass[12pt,xcolor={dvipsnames},hyperref={pdftex,pdfpagemode=UseNone,hidelinks,pdfdisplaydoctitle=true},usepdftitle=false]{beamer}
 \usepackage{presentation}
-
-% Enter presentation title:
+% Enter title of presentation PDF:
 \hypersetup{pdftitle={Presentation Example}}
-
-% Enter PDF file with figures:
+% Enter link to PDF file with figures:
 \newcommand{\pdf}{figures.pdf}
 
-% Fill out presentation:
 \begin{document}
+% Enter presentation title:
 \title{Presentation Title}
+% Enter presentation author:
 \information{Author}%
+% Enter presentation date:
 {Date}%
+% Enter link to research paper:
 {https://github.com/pmichaillat/latex-presentation}
 \frame[plain]{\titlepage}
 
+% Fill out content of presentation:
 \begin{frame}
 \frametitle{Slide title}
 \begin{itemize}
@@ -55,6 +57,43 @@
 \end{enumerate}
 \end{frame}
 
+\begin{frame}[label=firstSlide]
+\frametitle{Slide with button}
+\begin{enumerate}
+\item excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+\item veniam quis nostrud exercitation: $u^* = \Lambda$
+\item veniam quis nostrud exercitation: $u^* = \Gamma - \zeta$
+\item veniam quis nostrud exercitation:  $u^* = \Omega - \eta$
+\item quis nostrud exercitation laboris nisi ut aliquip ex ea commodo consequat
+\end{enumerate}
+\hyperlink{backupSlide}{\beamergotobutton{Go to a first backup slide}}
+\hyperlink{anotherBackupSlide}{\beamergotobutton{Go to another backup slide}}
+\end{frame}
+
+\begin{frame}[label=backupSlide]
+\frametitle{First backup slide}
+\begin{itemize}
+\item lemma: lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua:
+\item theorem: ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+\item corollary: duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur
+\end{itemize}
+\hyperlink{firstSlide}{\beamergotobutton{Return to main slide}}
+\end{frame}
+
+\begin{frame}[label=anotherBackupSlide]
+\frametitle{Another backup slide}
+\begin{enumerate}
+\item lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua
+\item ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+\item duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur
+\end{enumerate}
+\hyperlink{firstSlide}{\beamergotobutton{Return to main slide}}
+\end{frame}
+
 \begin{frame}
 \heading{Section title}
 \end{frame}
@@ -89,6 +128,7 @@
 \begin{equation*}
 \dot{b}_{j}(t) = i(t) b_{j}(t) + p_{j}(t)  y_{j}(t) - \int_0^1 p_{k}(t) c_{jk}(t)\,dk
 \end{equation*}
+\item lorem ipsum dolor sit amet, consectetur adipisicing elit
 \end{itemize}
 \end{frame}
 
