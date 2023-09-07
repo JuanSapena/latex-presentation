@@ -1,14 +1,12 @@
-%% Fonts
+% --- Fonts ---
 
 \usefonttheme{professionalfonts}
 \usepackage{sourcesanspro}
+\usepackage{sourcecodepro}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm,eucal,bbold,bm}
-\usepackage[italic,eulergreek]{mathastext}
-
-% URL font
+\usepackage[italic,eulergreek,symbolmisc]{mathastext}
 \usepackage{url}
-\urlstyle{same}
 
 % Microtypography
 \usepackage{microtype}
@@ -21,97 +19,74 @@
 \MTsetmathskips{l}{0mu}{\thinmuskip}
 \MTsetmathskips{j}{\thinmuskip}{\thinmuskip}
 
-%% Beamer theme
+% --- Beamer theme ---
 
 \usetheme{Boadilla}
 \usecolortheme[]{seagull}
 \setbeamercovered{transparent}
 \setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}{}
 
-%% Generic slide
+% --- Font sizes and shapes ---
+
+\setbeamerfont{title}{size=\huge, series=\scshape}
+\setbeamerfont{author}{size=\large}
+\setbeamerfont{frametitle}{series=\scshape}
+\setbeamertemplate{frametitle}{\MakeLowercase{\insertframetitle}}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamerfont{button}{size=\footnotesize}
+
+% --- Spacing ---
+
+\usepackage[onehalfspacing]{setspace}
+\setbeamertemplate{title page}[default][left,leftskip=-8pt]
+\addtobeamertemplate{frametitle}{\vskip3mm}{}
+\setbeamersize{text margin left=5mm,text margin right=5mm}
+
+% --- Color ---
 
 \colorlet{myblack}{black!85!}
 \colorlet{mygray}{gray!60!}
-\setbeamercolor{normal text}{fg=myblack}
-
-% Line spacing
-\usepackage{setspace} 
-\setstretch{1.4} 
-
-%% Title slide
-
-\setbeamerfont{title}{size=\LARGE, series=\scshape}
-\setbeamerfont{author}{size=\large}
-\setbeamertemplate{title page}[default][left,leftskip=-9pt]
 \setbeamercolor{title}{fg=myblack}
-\setbeamercolor{date}{fg=mygray}
-
-% Title capitalization and underline
-\let\oldtitle\title
-\renewcommand{\title}[1]{\oldtitle[]{\MakeLowercase{#1}\vspace{-7mm}\\\color{myblack}{\rule{\textwidth}{2pt}}\vspace{5mm}}}
-
-% Paper information
-\newcommand{\information}[3]{\author[]{#1\vspace{0.5cm}\\#2\vspace{0.5cm}\\\color{mygray}{\small Paper available at \url{#3}}\vspace*{-2cm}}\date[]{}}
-
-%% Section slide
-
-\newcommand{\heading}[1]{\LARGE\scshape\color{myblack}\MakeLowercase{#1}\vspace{-7mm}\\\color{mygray}{\rule{\textwidth}{2pt}}}
-
-%% Headings
-
-\setbeamerfont{frametitle}{series=\scshape}
-\setbeamertemplate{frametitle}[default][left,leftskip=3pt]
-\addtobeamertemplate{frametitle}{\vspace*{-4mm}}{}
 \setbeamercolor{frametitle}{fg=myblack}
-
-% Capitalization
-\let\oldframetitle\frametitle
-\renewcommand{\frametitle}[1]{\oldframetitle{\vspace{-0.3cm}\MakeLowercase{#1}}}
-
-%% Lists
-
-\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
-\setbeamertemplate{itemize item}{\textbullet}
-\setbeamertemplate{itemize subitem}{\textendash} 
-\setbeamertemplate{enumerate item}[default]
+\setbeamercolor{normal text}{fg=myblack}
 \setbeamercolor{itemize item}{fg=mygray}
 \setbeamercolor{itemize subitem}{fg=mygray} 
 \setbeamercolor{enumerate item}{fg=mygray} 
 \setbeamercolor{enumerate subitem}{fg=mygray}
+\setbeamercolor{footline}{fg=mygray}
+\setbeamercolor{button}{fg=mygray, bg=white}
 
-%% Tables, figures, equations 
+% --- Slide numbers ---
 
-\usepackage{multirow,booktabs,graphicx}
+% No slide numbers by default
+\setbeamertemplate{footline}{}
 
-% Captions
-\usepackage{caption,subcaption}
-\captionsetup{labelformat=empty}
+% Uncomment the line below to insert slide numbers
+% \setbeamertemplate{footline}[frame number]
 
-% Display spacing
-\newcommand{\sfig}{0.26}
-\renewcommand{\arraystretch}{0.9}
-\AtBeginDocument{\setlength{\belowdisplayskip}{3mm}}
-\AtBeginDocument{\setlength{\abovedisplayskip}{3mm}}
-\AtBeginDocument{\setlength{\belowdisplayshortskip}{3mm}}
-\AtBeginDocument{\setlength{\abovedisplayshortskip}{3mm}}
+% --- Title slide ---
 
-% Centered figures with white background
-\let\oldincludegraphics\includegraphics 
-\renewcommand{\includegraphics}[2][]{\centering\textcolor{black}{\oldincludegraphics[#1]{#2}}}
+% % Title capitalization and underline
+\let\oldtitle\title
+\renewcommand{\title}[1]{\oldtitle[]{\MakeLowercase{#1}\vspace{-5mm}\\\color{myblack}{\rule{\textwidth}{2pt}}\vspace{1cm}}}
 
-%% Pictograms
-
-\def\up{\textuparrow\,}
-\def\down{\textdownarrow\,}
-\def\flat{\textrightarrow\,}
-\def\then{$\rightsquigarrow\,$}
-\def\so{{$\Rightarrow\,$}}
-\def\tb{\textbar{}\,}
-
-%% Alerts
-
+% Paper information
 \usepackage{xparse}
+\NewDocumentCommand{\information}{o g g}{%
+\author[]{#2%
+\IfValueT{#3}{\vspace{5mm}\\#3}%
+\IfValueT{#1}{\vspace{5mm}\\\color{mygray}{\footnotesize Available at \url{#1}}}%
+}\date[]{}}
+
+% --- Lists ---
+
+\setbeamertemplate{itemize item}{\textbullet}
+\setbeamertemplate{itemize subitem}{\textendash} 
+\setbeamertemplate{enumerate item}[default]
+\setbeamertemplate{enumerate subitem}[default]
+\setbeamertemplate{enumerate subitem}{\alph{enumii}.}
+
+% --- Alerts ---
 
 % Standard alert
 \NewDocumentCommand{\al}{o g}{%
@@ -133,8 +108,35 @@
 \IfNoValueTF{#1}{\textcolor{NavyBlue}{#2}}%
 {\textcolor<#1>{NavyBlue}{#2}}}
 
-%% Last slide
+% --- Tables & figures  ---
 
-\newcommand{\lastslide}{\setbeamercolor{normal text}{bg=mygray}\begin{frame}\end{frame}}
+\usepackage{multirow,booktabs}
 
+% Captions
+\usepackage{caption}
+\captionsetup{labelformat=empty,size=normalsize}
+
+% Figure size
+\newcommand{\sfig}{0.25}
+\newcommand{\mfig}{0.29}
+
+% Centered figures
+\let\oldincludegraphics\includegraphics 
+\renewcommand{\includegraphics}[2][]{\centering\oldincludegraphics[#1]{#2}}
+
+% --- Section slide ---
+
+\newcommand{\heading}[1]{\LARGE\scshape\color{myblack}\singlespacing\MakeLowercase{#1}\vspace{-3mm}\\\color{myblack}{\rule{\textwidth}{2pt}}}
+
+% --- Pictograms ---
+
+\def\up{\textuparrow\,}
+\def\down{\textdownarrow\,}
+\def\flat{\textrightarrow\,}
+\def\then{$\rightsquigarrow\,$}
+\def\so{{$\implies$}}
+
+% --- Last slide ---
+
+\newcommand{\lastslide}{{\setbeamercolor{normal text}{bg=mygray}\begin{frame}\end{frame}}}
 
