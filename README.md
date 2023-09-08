@@ -4,18 +4,18 @@ This repository contains a [LaTeX](https://github.com/latex3/latex2e) template f
 
 ## Documentation
 
-The template's documentation is available at https://pascalmichaillat.org/d1/.
+The template is documented at https://pascalmichaillat.org/d1/.
 
 ## Features
 
 + The font for text, roman math, and numbers is [Source Sans Pro](https://github.com/adobe-fonts/source-sans).
 + The font for Greek and calligraphic math is [Euler](http://luc.devroye.org/fonts-26139.html).
-+ No colors are used in the text (only black/gray) to reduce distraction; colors are reserved for graphs and alerts.
++ No colors are used in the text (only grayscale) to reduce distraction; colors are reserved for graphs and alerts.
 + Margins, spacing, and font size are set for comfortable reading.
-+ The aspect ratio is set to 4:3.
 + There are no frills at the periphery of the slides.
 + Slides with figures, tables, and section headings can easily be inserted into the presentation.
-+ The file `presentation.pdf` illustrate the output of the template.
++ The aspect ratio is set to 4:3.
++ The file `presentation.pdf` illustrates the output of the template.
 
 ## Usage
 
