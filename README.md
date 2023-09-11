@@ -28,7 +28,7 @@ The template is documented at https://pascalmichaillat.org/d1/.
 
 ## Software
 
-The template was developed on a Mac running macOS Ventura 13.2 with the MacTeX-2021 distribution. It continues to work on a Mac running macOS Ventura 13.5 with the MacTeX-2023 distribution. Hopefully, it should also work on other machines and with other distributions.
+The template was developed on a Mac with the MacTeX-2021 distribution, and it continues to work with the MacTeX-2023 distribution. Hopefully, it should also work on other machines and with other distributions.
 
 ## License
 
