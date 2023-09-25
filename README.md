@@ -1,6 +1,6 @@
 # Minimalist LaTeX Template for Academic Presentations
 
-This repository contains a [LaTeX](https://github.com/latex3/latex2e) template for academic presentations. The template uses the [Beamer class](https://github.com/josephwright/beamer). The template carefully follows typographical best practices and has a minimalist design.
+This repository contains a [LaTeX](https://github.com/latex3/latex2e) template to create an academic presentation. The template uses the [Beamer class](https://github.com/josephwright/beamer). The template carefully follows typographical best practices and has a minimalist design.
 
 ## Documentation
 
