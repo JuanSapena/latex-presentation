@@ -6,6 +6,10 @@ This repository contains a [LaTeX](https://github.com/latex3/latex2e) template t
 
 The template is documented at https://pascalmichaillat.org/d1/.
 
+## Illustration
+
+The presentation produced by the template can be viewed at https://pascalmichaillat.org/d1.pdf.
+
 ## Features
 
 + The font for text, roman math, and numbers is [Source Sans Pro](https://github.com/adobe-fonts/source-sans).
@@ -15,7 +19,6 @@ The template is documented at https://pascalmichaillat.org/d1/.
 + There are no frills at the periphery of the slides.
 + Slides with figures, tables, and section headings can easily be inserted into the presentation.
 + The aspect ratio is set to 4:3.
-+ The file `presentation.pdf` illustrates the output of the template.
 
 ## Usage
 

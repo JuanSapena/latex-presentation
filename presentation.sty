@@ -13,11 +13,8 @@
 \DisableLigatures[f]{encoding = *, family = * }
 
 % Correct spacing around letters in math
-\MTsetmathskips{f}{\thinmuskip}{0mu} 
-\MTsetmathskips{y}{\thinmuskip}{0mu}
-\MTsetmathskips{p}{\thinmuskip}{0mu}
-\MTsetmathskips{l}{0mu}{\thinmuskip}
-\MTsetmathskips{j}{\thinmuskip}{\thinmuskip}
+\MTsetmathskips{y}{1mu}{0mu}
+\MTsetmathskips{j}{1.5mu}{0mu}
 
 % --- Beamer theme ---
 
@@ -32,6 +29,7 @@
 \setbeamerfont{author}{size=\large}
 \setbeamerfont{frametitle}{series=\scshape}
 \setbeamertemplate{frametitle}{\MakeLowercase{\insertframetitle}}
+\setbeamertemplate{frametitle continuation}{[\insertcontinuationcount]}
 \setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
 \setbeamerfont{button}{size=\footnotesize}
 
@@ -131,6 +129,7 @@
 \def\flat{\textrightarrow\,}
 \def\then{$\rightsquigarrow\,$}
 \def\so{{$\implies$}}
+\def\iff{{$\shortiff$}}
 
 % --- Last slide ---
 
