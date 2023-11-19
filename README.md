@@ -37,6 +37,16 @@ The template was developed on a Mac with the MacTeX-2021 distribution, and it co
 
 The content of this repository is licensed under the terms of the MIT License.
 
+## Real-world implementations
+
++ [u* = √uv (4:3 format)](https://pascalmichaillat.org/13p.pdf)
++ [u* = √uv (16:9 format)](https://pascalmichaillat.org/13ps.pdf)
++ [Modeling the Displacement of Native Workers by Immigrants](https://pascalmichaillat.org/14p.pdf)
++ [An Economomical Business-Cycle Model](https://pascalmichaillat.org/7p.pdf)
++ [Beveridgean Unemployment Gap](https://pascalmichaillat.org/9p.pdf)
++ [Pricing under Fairness Concerns](https://pascalmichaillat.org/8p.pdf)
++ [Resolving New Keynesian Anomalies with Wealth in the Utility Function](https://pascalmichaillat.org/11p.pdf)
+
 ## Related resources
 
 + [LaTeX template for academic papers](https://github.com/pmichaillat/latex-paper) – This template produces academic papers following the same principles, and with a similar appearance, as this presentation template. 
