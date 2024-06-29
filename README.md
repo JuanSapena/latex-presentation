@@ -1,6 +1,6 @@
 # Minimalist LaTeX Template for Academic Presentations
 
-This repository contains a [LaTeX](https://github.com/latex3/latex2e) template to create an academic presentation. The template uses the [Beamer class](https://github.com/josephwright/beamer). The template carefully follows typographical best practices and has a minimalist design.
+This repository contains a [LaTeX](https://github.com/latex3/latex2e) template to create an academic presentation. The template uses the [Beamer class](https://github.com/josephwright/beamer). The template carefully follows typographical best practices and has a minimalist design. The template is particularly well suited for research presentations. It is designed to convey scientific arguments and results effectively.
 
 ## Documentation
 
@@ -9,16 +9,6 @@ The template is documented at https://pascalmichaillat.org/d1/.
 ## Illustration
 
 The presentation produced by the template can be viewed at https://pascalmichaillat.org/d1.pdf.
-
-## Features
-
-+ The font for text, roman math, and numbers is [Source Sans Pro](https://github.com/adobe-fonts/source-sans).
-+ The font for Greek and calligraphic math is [Euler](http://luc.devroye.org/fonts-26139.html).
-+ No colors are used in the text (only grayscale) to reduce distraction; colors are reserved for graphs and alerts.
-+ Margins, spacing, and font size are set for comfortable reading.
-+ There are no frills at the periphery of the slides.
-+ Slides with figures, tables, and section headings can easily be inserted into the presentation.
-+ The aspect ratio is set to 4:3.
 
 ## Usage
 
@@ -31,7 +21,9 @@ The presentation produced by the template can be viewed at https://pascalmichail
 
 ## Software
 
-The template was developed on a Mac with the MacTeX-2021 distribution, and it continues to work with the MacTeX-2023 distribution. Hopefully, it should also work on other machines and with other distributions.
+The template was developed, tested, and validated on a Mac with the MacTeX-2023 distribution. 
+
+While the template should also work on other operating systems and with other LaTeX distributions, compatibility cannot be guaranteed. Users on Windows or Linux systems, or those using different LaTeX distributions, may need to make minor adjustments. Please report any compatibility issues or bugs you encounter to help improve cross-platform support.
 
 ## License
 
@@ -39,9 +31,8 @@ The content of this repository is licensed under the terms of the MIT License.
 
 ## Real-world implementations
 
-+ [u* = √uv (4:3 format)](https://pascalmichaillat.org/13p.pdf)
-+ [u* = √uv (16:9 format)](https://pascalmichaillat.org/13ps.pdf)
-+ [Modeling the Displacement of Native Workers by Immigrants](https://pascalmichaillat.org/14p.pdf)
++ [u* = √uv](https://pascalmichaillat.org/13p.pdf)
++ [Modeling Job Stealing](https://pascalmichaillat.org/14p.pdf)
 + [An Economomical Business-Cycle Model](https://pascalmichaillat.org/7p.pdf)
 + [Beveridgean Unemployment Gap](https://pascalmichaillat.org/9p.pdf)
 + [Pricing under Fairness Concerns](https://pascalmichaillat.org/8p.pdf)
