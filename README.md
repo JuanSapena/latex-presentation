@@ -23,7 +23,7 @@ The presentation produced by the template can be viewed at https://pascalmichail
 
 The template was developed, tested, and validated on a Mac with the MacTeX-2023 distribution. 
 
-While the template should also work on other operating systems and with other LaTeX distributions, compatibility cannot be guaranteed. Users on Windows or Linux systems, or those using different LaTeX distributions, may need to make minor adjustments. Please report any compatibility issues or bugs you encounter to help improve cross-platform support.
+While the template should also work on other operating systems and with other LaTeX distributions, compatibility cannot be guaranteed. Users on Windows or Linux systems, or those using different LaTeX distributions, may need to make minor adjustments. [Please report](https://github.com/pmichaillat/latex-presentation/issues) any compatibility issues or bugs to help improve cross-platform support.
 
 ## License
 
@@ -31,8 +31,8 @@ The content of this repository is licensed under the terms of the MIT License.
 
 ## Real-world implementations
 
-+ [u* = √uv](https://pascalmichaillat.org/13p.pdf)
-+ [Modeling Job Stealing](https://pascalmichaillat.org/14p.pdf)
++ [Modeling Migration-Induced Unemployment](https://pascalmichaillat.org/14p.pdf)
++ [u* = √uv: The Full-Employment Rate of Unemployment in the United States](https://pascalmichaillat.org/13p.pdf)
 + [An Economomical Business-Cycle Model](https://pascalmichaillat.org/7p.pdf)
 + [Beveridgean Unemployment Gap](https://pascalmichaillat.org/9p.pdf)
 + [Pricing under Fairness Concerns](https://pascalmichaillat.org/8p.pdf)
